@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="noindex" name="robots">
+    <link href="https://www.google.com/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Product+Sans" rel="stylesheet">
+    <title>Pixel Search by Rays Robotics</title>
+
+    <script async src="https://cse.google.com/cse.js?cx=a76de1f5a588c461b"></script>
+
+    <style>
+      /* Global styles */
+      body {
+        background-color: #121212;
+        color: #e0e0e0; /* Primary text color */
+        font-family: 'Product Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Header styles */
+      #cse-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        width: 100%;
+        z-index: 10;
+        position: relative;
+        transition: padding 0.3s ease;
+      }
+
+      #cse-header h1 {
+        font-size: 2.5rem;
+        color: #00bcd4; /* Accent color for the heading */
+        margin: 0;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-shadow: 0px 0px 10px rgba(0, 188, 212, 0.7);
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .gcse-searchbox {
+        width: 400px;
+        height: 50px;
+        background: #2a2a2a;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .gcse-searchbox input[type="text"] {
+        width: 100%;
+        height: 40px;
+        border: none;
+        background: transparent;
+        color: #e0e0e0; /* Input text color */
+        font-size: 1.1rem;
+        outline: none;
+        padding-left: 15px;
+        border-radius: 25px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .gcse-searchbox input[type="text"]:focus {
+        background-color: #333;
+        transform: scale(1.05);
+      }
+
+      .gcse-searchbox input[type="submit"] {
+        display: none;
+      }
+
+      /* Search results styles */
+      .gcse-searchresults {
+        width: 100%;
+        max-width: 1000px;
+        margin-top: 30px;
+        padding: 10px;
+        transition: margin 0.3s ease;
+      }
+
+      .gs-webResult {
+        background: #1e1e1e;
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: slideIn 0.5s ease-out;
+      }
+
+      .gs-webResult:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3);
+      }
+
+      .gs-title {
+        color: #00bcd4; /* Accent color for links/titles */
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+        transition: color 0.3s ease, transform 0.2s ease;
+      }
+
+      .gs-title:hover {
+        color: #fff; /* Hover color */
+        transform: translateX(5px);
+      }
+
+      .gs-visibleUrl-long, .gs-visibleUrl-short {
+        color: #888; /* Subtle color for URLs */
+        font-size: 1rem;
+      }
+
+      .gs-snippet {
+        color: #bbb; /* Subtle color for snippets */
+        font-size: 1rem;
+        opacity: 0.8;
+      }
+
+      /* Footer styles */
+      #cse-footer {
+        position: absolute;
+        bottom: 20px;
+        font-size: 0.9rem;
+        text-align: center;
+        color: #aaa; /* Footer text color */
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      /* Loader styles */
+      #DZPTFe {
+        display: none;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      @keyframes slideIn {
+        0% { transform: translateY(30px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+      }
+
+      /* Mobile Styles */
+      @media (max-width: 768px) {
+        #cse-header {
+          padding: 15px;
+        }
+
+        #cse-header h1 {
+          font-size: 2rem;
+        }
+
+        .gcse-searchbox {
+          width: 80%;
+          height: 40px;
+          padding-left: 15px;
+        }
+
+        .gcse-searchbox input[type="text"] {
+          font-size: 1rem;
+          padding-left: 8px;
+        }
+
+        .gcse-searchresults {
+          margin-top: 20px;
+          width: 100%;
+        }
+
+        .gs-webResult {
+          padding: 12px;
+        }
+
+        .gs-title {
+          font-size: 1.1rem;
+        }
+
+        #cse-footer {
+          font-size: 0.7rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gcse-searchbox {
+          width: 90%;
+        }
+
+        .gcse-searchbox input[type="text"] {
+          font-size: 1rem;
+        }
+
+        #cse-footer {
+          font-size: 0.6rem;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <noscript>
+      <h3>Pixel Search by Rays Robotics requires JavaScript</h3>
+      <p>JavaScript is either disabled or not supported by your browser. To use Pixel Search, enable JavaScript by changing your browser options and reloading this page.</p>
+    </noscript>
+
+    <div id="cse-hosted">
+      <div id="cse-header">
+        <h1>Pixel Search</h1>
+        <div class="gcse-searchbox" id="cse-search-form">
+          <input type="text" name="q" placeholder="Search...">
+        </div>
+      </div>
+
+      <div id="cse-body">
+        <div id="cse">
+          <!-- Google Custom Search Results will appear here -->
+          <div class="gcse-searchresults"></div>
+        </div>
+      </div>
+
+      <div id="cse-footer">&copy; 2024 Rays Robotics</div>
+    </div>
+  </body>
+</html>
